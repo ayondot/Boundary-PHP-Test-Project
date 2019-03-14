@@ -10,7 +10,7 @@ This skeleton application was built using composer.
 
  - PHP 7.1+
  - PostgresSQL (https://www.postgresql.org/download/)
- - Composer.phar (can be found in this directory if not already installed).
+ - Composer - Follow instructions for your Operating System (https://getcomposer.org/).
 
 ### Running the App
 Within your idea, or by console if you desire, be sure to install the project's dependencies with 'php composer.phar install'
