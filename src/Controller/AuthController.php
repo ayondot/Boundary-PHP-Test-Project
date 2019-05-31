@@ -35,4 +35,19 @@ class AuthController
         }
     }
 
+    public function register(Request $request, Response $response) {
+        $payload = $request->getParsedBody();
+
+        $first_name = $payload['first_name'];
+        $second_name = $payload['second_name'];
+        $email_address = $payload['email_address'];
+        $username = $first_name[0].$second_name;
+        $password = password_hash($payload['password'], PASSWORD_DEFAULT);
+
+        $stmt = 'insert into "users" (first_name, second_name, email_address, username, password) values (?, ?, ?, ?, ?)';
+
+        $this->db->select($stmt, [$first_name, $second_name, $email_address, $username, $password]);
+
+        return $response->withJson(['message' => 'User added successfully'], 201);
+    }
 }

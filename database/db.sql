@@ -9,7 +9,7 @@ create table users (
 	second_name varchar(50) not null,
 	email_address varchar not null,
 	username varchar,
-	password varchar(12) not null,
+	password varchar(60) not null,
 	is_active boolean default true,
 	constraint users_pk primary key (id),
 	constraint username_un unique(username),

@@ -6,10 +6,10 @@ return [
             'driver' => 'pgsql',
             'host' => 'localhost',
             'port' => '5432',
-            'database' => 'postgres',
+            'database' => 'oneshop',
             'username' => 'postgres',
             'password' => 'postgres',
-            'schema' => 'boundary_test',
+            'schema' => 'public',
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
         ]
